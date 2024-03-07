@@ -26,7 +26,7 @@ Feature: internal
     Then user able to click on users
     When user able to Add project from users
     Then verify user able to validate
-  @Test3
+  @Test4
   Scenario: Project Admin
     Given user able to click on Project Admin
 

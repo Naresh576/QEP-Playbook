@@ -1,5 +1,8 @@
 package stepdefinition;
 
+
+
+import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -14,7 +17,7 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
+
 
 public class Hooks{
 
@@ -47,6 +50,12 @@ public class Hooks{
 
     public static String user2="sunkarinaresh576@gmail.com";
     public static String pass2="Naresh@";
+
+    public static String inputNameNew="Ravi";
+    public static String inputLastName="Jaddu";
+    public static String emailId="ravijaddu4311@yopmail.com";
+    public static String org="ValueLabs" ;
+    public static String role="coustmer ";
     public static String User3=" ";
     public static String Pass3=" ";
     @SuppressWarnings("deprecation")
@@ -54,12 +63,13 @@ public class Hooks{
 
 
     @Before
-    public void openBrowser() {
+    public void openBrowser() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(5000);
+       //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     public static void launchApplication() {

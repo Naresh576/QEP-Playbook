@@ -110,7 +110,7 @@ public class internalSteps {
 
     @Given("user able to click on Project Admin")
     public void userAbleToClickOnProjectAdmin() {
-        lp.projectAdmin();
+        lp.projectAdmin2();
     }
 
 
