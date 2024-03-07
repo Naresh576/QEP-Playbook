@@ -527,16 +527,9 @@ public class internalPage {
     private static void assertEqualStrings(String expected, String actual) {
         assert expected.equals(actual) : "Strings are not equal: expected '" + expected + "', actual '" + actual + "'";
     }
-     private String cProject="//img[@title='Project Admin']";
-        public void projectAdmin(){
-            //driver.navigate().refresh();
-            WebElement loc = driver.findElement(By.xpath(String.format(cProject)));
-            JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-            jsExecutor.executeScript("arguments[0].click();", loc);
 
 
 
-        }
 
 
 }
