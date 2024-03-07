@@ -1,7 +1,5 @@
 package stepdefinition;
 
-
-
 import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -16,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 
@@ -68,8 +67,7 @@ public class Hooks{
         driver = new ChromeDriver();
         driver.manage().deleteAllCookies();
         driver.manage().window().maximize();
-        Thread.sleep(5000);
-       //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
     public static void launchApplication() {
