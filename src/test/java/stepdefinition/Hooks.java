@@ -1,6 +1,5 @@
 package stepdefinition;
 
-import edu.emory.mathcs.backport.java.util.concurrent.TimeUnit;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -22,7 +21,8 @@ public class Hooks{
 
     public static  WebDriver driver;
    // public static String url = "https://demowebshop.tricentis.com/";
-    public static String url="https://qep-testing.qualizeal.com/landing-page";
+    public static String url1="https://qep-testing.qualizeal.com/landing-page";
+    public static String url2="https://qep-testing.qualizeal.com/landing-page";
     //public static String url = "https://ui.cogmento.com/";
 
     //public static String user = "hemant.chauhan@qualizeal.com";
@@ -70,8 +70,8 @@ public class Hooks{
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
     }
 
-    public static void launchApplication() {
-        driver.get(url);
+    public static void launchApplication(String url1) {
+        driver.get(url2);
     }
     public static String getRandomString(String prefix,int length){
         int randomStringLen = length-prefix.length();

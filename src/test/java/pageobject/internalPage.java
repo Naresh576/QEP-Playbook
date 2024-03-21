@@ -136,9 +136,18 @@ public class internalPage {
         jsExecutor6.executeScript("arguments[0].click();", loc6);
         loc6.sendKeys(Hooks.inputName9);
 
-        WebElement loc7 = driver.findElement(By.xpath(String.format(signIN)));
-        JavascriptExecutor jsExecutor7 = (JavascriptExecutor) driver;
-        jsExecutor7.executeScript("arguments[0].click();", loc7);
+        try {
+
+            WebElement loc7 = driver.findElement(By.xpath(String.format(signIN)));
+            /*JavascriptExecutor jsExecutor7 = (JavascriptExecutor) driver;
+            jsExecutor7.executeScript("arguments[0].click();", loc7);*/
+            if (loc7.isDisplayed()) {
+                loc7.click();
+            }
+        }
+        catch(Exception e) {
+
+        }
 
     }
 

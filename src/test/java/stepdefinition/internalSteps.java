@@ -7,13 +7,16 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import pageobject.internalPage;
 
+import static stepdefinition.Hooks.url1;
+
 public class internalSteps {
     private WebDriver driver = stepdefinition.Hooks.driver;
     internalPage lp = new internalPage(driver);
 
     @Given("the user is on the Demo Web Shop login page")
     public void the_user_is_on_the_demo_web_shop_login_page() {
-        stepdefinition.Hooks.launchApplication();
+
+        stepdefinition.Hooks.launchApplication(url1);
     }
 
 
@@ -73,6 +76,7 @@ public class internalSteps {
 
     @When("usr able to add Bunit")
     public void usrAbleToAddBunit() {
+
         lp.addBunit();
     }
 
@@ -110,6 +114,7 @@ public class internalSteps {
 
     @Given("user able to click on Project Admin")
     public void userAbleToClickOnProjectAdmin() {
+
         lp.projectAdmin2();
     }
 
